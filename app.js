@@ -3,8 +3,13 @@ let amigos = []
 
 let inputElement = document.getElementById('amigo')
 
-
+document.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+     adicionarAmigo() // Ações a serem executadas quando o Enter for pressionado
+    }
+  });
 function adicionarAmigo(){
+
     if(inputElement.value == ""){
         alert("Por favor, insira um nome.");
     }else{
@@ -32,11 +37,11 @@ function sortearAmigo(){
     if (amigos == ""){
         alert("Por favor, insira um nome.");
     } else{
-        let resultado = document.getElementById('resultado')
-        let sortear = Math.floor(Math.random()* amigos.length);
-        let sorteio = amigos[sortear]
+        let resultado = document.getElementById('resultado') // id resultado do HTML
+        let sortear = Math.floor(Math.random()* amigos.length); // pega a quantidade de elementos de forma aleatória
+        let sorteio = amigos[sortear] // pega os elementos e atribui seus nomes 
         resultado.innerHTML = sorteio
-        amigos.splice(sortear, 1)
+        amigos.splice(sortear, 1) // impede que haja repetição
     }
     
 }

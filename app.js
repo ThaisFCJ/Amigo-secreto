@@ -1,5 +1,6 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 let amigos = []
+
 let inputElement = document.getElementById('amigo')
 
 
@@ -23,5 +24,20 @@ function listaTabela(){
         nome.innerHTML = amigos[i]; // pega o elemento (i) do array e adiciona apenas ele
         lista.appendChild(nome); // insere os nomes listados na lista que aparece no HTML
     }
+}
+
+function sortearAmigo(){
+    let lista = document.getElementById('listaAmigos') 
+    lista.innerHTML = ''
+    if (amigos == ""){
+        alert("Por favor, insira um nome.");
+    } else{
+        let resultado = document.getElementById('resultado')
+        let sortear = Math.floor(Math.random()* amigos.length);
+        let sorteio = amigos[sortear]
+        resultado.innerHTML = sorteio
+        amigos.splice(sortear, 1)
+    }
+    
 }
 

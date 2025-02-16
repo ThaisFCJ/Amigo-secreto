@@ -19,11 +19,11 @@ Como utilizar o programa ?
 
 Alerta "Por favor, insira um nome"
 
-- Clicou no botão "Adicionar" ou pressionou a tecla Enter com o campo "Digite um nome" vazio
+- Clicou no botão "Adicionar"/"Sortear amigo" ou pressionou a tecla Enter com o campo "Digite um nome" vazio
 
-Alerta "A lista acabou!Reinicie a página para começar novamente"
+Alerta "A lista acabou!O jogo será reiniciado"
 
-- Todos os nomes já foram sorteados
+- Todos os nomes já foram sorteados e o jogo reiniciará 
 
 ## 💻 Tecnologias
 <div>

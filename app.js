@@ -1,6 +1,6 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 let amigos = []
-
+let listaVerificada = false;
 let inputElement = document.getElementById('amigo')
 
 document.addEventListener('keypress', function(event) {
@@ -34,15 +34,26 @@ function listaTabela(){
 function sortearAmigo(){
     let lista = document.getElementById('listaAmigos') 
     lista.innerHTML = ''
-    if (amigos == ""){
-        alert("Por favor, insira um nome.");
+    if (!listaVerificada && lista.innerHTML == ''){  
+         alert("Por favor, insira um nome.");
+        
     } else{
+        if (amigos.length === 0){
+    
+            vazio()
+        }
         let resultado = document.getElementById('resultado') // id resultado do HTML
         let sortear = Math.floor(Math.random()* amigos.length); // pega a quantidade de elementos de forma aleatória
         let sorteio = amigos[sortear] // pega os elementos e atribui seus nomes 
         resultado.innerHTML = sorteio
         amigos.splice(sortear, 1) // impede que haja repetição
+
     }
-    
+}
+
+function vazio (){
+    alert("A lista acabou! O jogo será reiniciado")
+    let resultado = document.getElementById('resultado')
+    resultado.innerHTML = ''
 }
 
